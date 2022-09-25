@@ -28,10 +28,7 @@ This project aims to make a simple etl processing, using pyspark with the deltal
 
 ## 🔧 Architeture ELT Delta lake <a name = "architeture"></a>
 
-![image](https://live-delta-io.pantheonsite.io/wp-content/uploads/2019/04/Delta-Lake-marketecture-0423c.png)
-
-
- work reads data from a filesystem called landing-zone using deltalake dependencies, which are jar packages that are in spark's session config, with which it is possible to use the delta lake framework. after the execution of this script, the data will be written in the directory passed in code, inside the write table will be written a directory called _delta_log, which is responsible for storing incremental files on table metadata, it will be something like
+work reads data from a filesystem called landing-zone using deltalake dependencies, which are jar packages that are in spark's session config, with which it is possible to use the delta lake framework. after the execution of this script, the data will be written in the directory passed in code, inside the write table will be written a directory called _delta_log, which is responsible for storing incremental files on table metadata, it will be something like
 00000000000000000000.json, 0000000000000000000001.json...
 Json file under the _delta_log folder will have the information like add/remove parquet files(for Atomicity), stats(for optimized performance & data skipping), partitionBy(for partition pruning), readVersions(for time travel), commitInfo(for audit).
 
