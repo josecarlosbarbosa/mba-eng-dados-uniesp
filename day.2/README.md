@@ -52,7 +52,7 @@ How the Delta Lake Upserts logic works and how we can make the adoption of the n
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Pyspark](https://spark.apache.org/docs/latest/api/python/index.html) - 3.1.1
+- [Pyspark](https://spark.apache.org/docs/latest/api/python/index.html) - 3.2.1
 - [Deltalake](https://docs.delta.io/latest/quick-start.html) 
 
 ## ✍️ Authors <a name = "authors"></a>
